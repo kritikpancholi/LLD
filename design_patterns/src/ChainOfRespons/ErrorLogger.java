@@ -2,8 +2,7 @@ package ChainOfRespons;
 
 import  ChainOfRespons.Logger;
 
-public class InfoLogger implements  Logger{
-
+public class ErrorLogger implements  Logger{
     Logger nextLogger ;
 
     @Override
@@ -12,11 +11,10 @@ public class InfoLogger implements  Logger{
     }
     @Override
     public void HandelRequest(int logLevel){
-        if(logLevel == INFO){
-            System.out.println("Here in INFO");
+        if(logLevel == ERROR){
+            System.out.println("Here in ERROR");
         }else{
             nextLogger.HandelRequest(logLevel);
         }
     }
-
 }

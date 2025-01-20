@@ -5,14 +5,8 @@ public interface Logger {
     static int DEBUG = 2;
     static int ERROR = 3;
 
-    Logger nextLogProccessor ;
+    void HandelRequest(int logLevel);
 
-    Logger(Logger logger){
-            logObj = logger
-    }
-
-    void HandelRequest();
-
-
+    void NextLogger(Logger obj);
 
 }

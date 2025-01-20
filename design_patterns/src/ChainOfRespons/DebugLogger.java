@@ -1,8 +1,7 @@
 package ChainOfRespons;
-
 import  ChainOfRespons.Logger;
 
-public class InfoLogger implements  Logger{
+public class DebugLogger implements  Logger{
 
     Logger nextLogger ;
 
@@ -12,8 +11,8 @@ public class InfoLogger implements  Logger{
     }
     @Override
     public void HandelRequest(int logLevel){
-        if(logLevel == INFO){
-            System.out.println("Here in INFO");
+        if(logLevel == DEBUG){
+            System.out.println("Here in DEBUG");
         }else{
             nextLogger.HandelRequest(logLevel);
         }
