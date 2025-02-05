@@ -19,7 +19,8 @@ public class CacheDriver {
 //        should give capacity full and then add 6 so will remove key 1
         cache.addKey(6,"this is kritik_6");
 //        cache.addKey(3,"this is kritik_3");
-        cache.get(2);
+        String key2 = cache.get(2);
+        System.out.println("got key 2 value = " + key2);
 //        now when we add new one it will evict 3 bcoz 2 is recently used.
         cache.addKey(7,"this is kritik_8");
 
