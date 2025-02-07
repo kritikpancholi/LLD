@@ -2,6 +2,7 @@ import ChainOfRespons.ChainOfResponsDriver;
 import observer_pattern.Driver;
 import Design.Cache.CacheDriver;
 import Creational.Builder.BuilderDriver;
+import Creational.Factory.FactoryDriver;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,9 +14,14 @@ public class Main {
 
 //        CacheDriver cacheDriver = new CacheDriver();
 
-        BuilderDriver builderDriver = new BuilderDriver();
-        builderDriver.build();
+//        BuilderDriver builderDriver = new BuilderDriver();
+//        builderDriver.build();
 
+
+        FactoryDriver  factoryDriver = new FactoryDriver();
+
+        factoryDriver.drive("Android");
+        factoryDriver.drive("IOS");
 
     }
 }
