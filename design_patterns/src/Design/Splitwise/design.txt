@@ -1,0 +1,37 @@
+
+user
+- name
+- email
+- id
+- UserBalanceSheet
+
+UserBalanceSheet
+- map<user, amount>  userBalanceMapping
+- totalAmountOwe
+- totalAmountLent
+
+
+group
+- list<user>members
+- list<expense> expense_history
+- addExpense()
+
+split
+- amount
+- user
+
+splitType -> Enum
+- equal , unequal , percentage
+
+expenseSplit --> interface
+- makeSplit()
+
+equalSplit implement expenseSplit
+unequalSplit implement expenseSplit
+percentageSplit implement expenseSplit
+
+expense
+- id
+- amount
+- user payed_by
+- List<split> lent_by
