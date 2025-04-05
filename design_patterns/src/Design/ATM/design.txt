@@ -1,0 +1,34 @@
+Requirements :-
+    1) The ATM system should support basic operations such as balance inquiry, cash withdrawal, and cash deposit.
+    2) Users should be able to authenticate themselves using a card and a PIN (Personal Identification Number).
+    3) The system should interact with a bank's backend system to validate user accounts and perform transactions.
+    4) The ATM should have a cash dispenser to dispense cash to users.
+
+Solution :-
+1) use state design patter for different state of atm
+2) use chain of responsible design patter for withdrawal or deposit as we have to check first 2k notes if not
+sufficient than move to 500 notes check if not sufficient move to 100 rupee note if not exit
+
+User
+- id
+- account_id
+- password
+
+TransactionType  -- enum
+- Debit , Credit
+
+
+AtmMachine
+- id
+- int amount
+
+
+States - abstract class
+- idle
+- authentication
+- select operations
+- back to idle
+
+
+
+
