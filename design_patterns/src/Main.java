@@ -1,4 +1,5 @@
 import ChainOfRespons.ChainOfResponsDriver;
+import Design.HotelBookingSystem.HotelDriver;
 import Design.Logger.LoggerDriver;
 import observer_pattern.Driver;
 import Design.Cache.CacheDriver;
@@ -30,8 +31,12 @@ public class Main {
 //
 //        factoryDriver.drive("Android");
 //        factoryDriver.drive("IOS");
-        LoggerDriver loggerDriver = new LoggerDriver();
-        loggerDriver.drive();
+//        LoggerDriver loggerDriver = new LoggerDriver();
+//        loggerDriver.drive();
+
+        HotelDriver hotelDriver = new HotelDriver();
+
+        hotelDriver.run();
 
 
     }
