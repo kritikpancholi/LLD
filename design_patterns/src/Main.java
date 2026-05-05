@@ -1,4 +1,5 @@
 import ChainOfRespons.ChainOfResponsDriver;
+import Design.BookMyShow.BookMyShowSetup;
 import Design.HotelBookingSystem.HotelDriver;
 import Design.Logger.LoggerDriver;
 import observer_pattern.Driver;
@@ -34,9 +35,11 @@ public class Main {
 //        LoggerDriver loggerDriver = new LoggerDriver();
 //        loggerDriver.drive();
 
-        HotelDriver hotelDriver = new HotelDriver();
-
-        hotelDriver.run();
+//        HotelDriver hotelDriver = new HotelDriver();
+//
+//        hotelDriver.run();
+        BookMyShowSetup bookMyShowSetup = new BookMyShowSetup();
+        bookMyShowSetup.run();
 
 
     }
