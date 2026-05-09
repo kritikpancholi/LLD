@@ -2,6 +2,8 @@ import ChainOfRespons.ChainOfResponsDriver;
 import Design.BookMyShow.BookMyShowSetup;
 import Design.HotelBookingSystem.HotelDriver;
 import Design.Logger.LoggerDriver;
+import Design.RateLimiter.RateLimiter;
+import Design.RateLimiter.RateLimiterDriver;
 import observer_pattern.Driver;
 import Design.Cache.CacheDriver;
 import Creational.Builder.BuilderDriver;
@@ -38,9 +40,11 @@ public class Main {
 //        HotelDriver hotelDriver = new HotelDriver();
 //
 //        hotelDriver.run();
-        BookMyShowSetup bookMyShowSetup = new BookMyShowSetup();
-        bookMyShowSetup.run();
+//        BookMyShowSetup bookMyShowSetup = new BookMyShowSetup();
+//        bookMyShowSetup.run();
 
+        RateLimiterDriver rateLimiterDriver = new RateLimiterDriver();
+        rateLimiterDriver.run();
 
     }
 }
